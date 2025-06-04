@@ -64,29 +64,38 @@
       color: #666;
     }
 
-    .slider {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 16/9;
-    }
-
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease;
-      width: 400%;
-    }
-
-    .slide {
-      flex: 0 0 100%;
-    }
-
-    .slide img {
+  .slider {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #fff; /* Optional: fill any extra space with white */
+  overflow: hidden;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
 
 
     .navigation {
@@ -146,12 +155,14 @@
   <p>Trusted Care and Support</p>
 
   <div class="slider">
-    <div class="slides" id="slides">
-      <div class="slide"><img src="img1.jpg" alt="Slide 1"></div>
-      <div class="slide"><img src="img2.jpg" alt="Slide 2"></div>
-      <div class="slide"><img src="img3.jpg" alt="Slide 3"></div>
-      <div class="slide"><img src="img4.jpg" alt="Slide 4"></div>
-    </div>
+  <div class="slides" id="slides">
+    <div class="slide"><img src="img1.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="img2.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="img3.jpg" alt="Slide 3"></div>
+    <div class="slide"><img src="img4.jpg" alt="Slide 4"></div>
+  </div>
+</div>
+
     <div class="navigation">
       <span class="dot active" onclick="goToSlide(0)"></span>
       <span class="dot" onclick="goToSlide(1)"></span>
