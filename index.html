@@ -8,20 +8,46 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
       background: #ffffff;
       color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      max-width: 150px;
+      height: auto;
+    }
+
+    nav a {
+      color: #007BFF;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    h1, p {
       text-align: center;
-      padding-top: 30px;
+      margin: 10px 0;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
     }
 
     p {
@@ -29,53 +55,32 @@
       color: #555;
     }
 
-    .logo {
-      max-width: 200px;
-      margin-bottom: 1rem;
-    }
-
-    nav a {
-      color: #007BFF;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      font-size: 1rem;
-    }
-
-    footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
     /* Slider Styles */
     .slider {
-      width: 80%;
-      max-width: 600px;
-      margin: 20px auto;
-      position: relative;
+      width: 100%;
       overflow: hidden;
-      border-radius: 10px;
+      position: relative;
     }
 
     .slides {
       display: flex;
+      width: 400%; /* 4 slides */
       transition: transform 0.5s ease-in-out;
-      width: 400%;
     }
 
     .slide {
-      width: 100%;
-      flex-shrink: 0;
+      flex: 0 0 100%;
     }
 
     .slide img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
     .navigation {
       text-align: center;
-      margin-top: 10px;
+      margin: 10px 0;
     }
 
     .dot {
@@ -91,22 +96,43 @@
     .dot.active {
       background-color: #333;
     }
+
+    footer {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="logo" class="logo" />
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="logo" class="logo" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Title & Tagline -->
   <h1>mediglobalpathway</h1>
   <p>Trusted Care and Support</p>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <!-- Slider -->
+  <!-- Image Slider -->
   <div class="slider">
     <div class="slides" id="slides">
       <div class="slide"><img src="img1.jpg" alt="Image 1" /></div>
@@ -122,10 +148,12 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 mediglobalpathway. All rights reserved.
   </footer>
 
+  <!-- Slider Script -->
   <script>
     let currentIndex = 0;
     const slides = document.getElementById('slides');
@@ -138,7 +166,6 @@
       dots[index].classList.add('active');
     }
 
-    // Auto slide every 4 seconds
     setInterval(() => {
       currentIndex = (currentIndex + 1) % 4;
       goToSlide(currentIndex);
