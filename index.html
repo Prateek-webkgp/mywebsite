@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Patna - Executive  Ph.D. Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #002147;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .news-ticker {
+            background-color: #ffcc00;
+            padding: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+        .news-ticker a {
+            color: #002147;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 50px;
+        }
+        .news-content {
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">IIT Patna - Executive Ph.D. Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#departments">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://registrations.iitp-cep.in/">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="campus1.jpg" class="d-block w-100" alt="Campus View 1">
+            </div>
+            <div class="carousel-item">
+                <img src="campus2.jpg" class="d-block w-100" alt="Campus View 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="news-ticker">
+        <div class="news-content">
+            <a href="#">Important Announcement: Admissions Closed  for Spring 2025</a>
+        </div>
+    </div>
+
+    <section id="about" class="container mt-5">
+        <h2>About Us</h2>
+        <p>The Indian Institute of Technology Patna (IIT Patna) is a premier educational institution dedicated to research and innovation.Education is the most important ingredient in the life of a human being that empowers one with civ>
+
+IIT Patna Senate adopted the NEP-2020 and started implementing it in letter and spirit. The first step towards it is marked by commencement of hybrid UG program  in streams of Computer Science and Business Management since July 2023 by >
+    </section>
+
+    <footer class="footer mt-5">
+        <p>&copy; 2025 IIT Patna Developed and maintained by CET. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
