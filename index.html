@@ -1,118 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medi Global Pathway</title>
-    
-    <!-- Google Fonts: Lato Regular + Bold -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            font-weight: 400;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medi Global Pathway</title>
 
-        h1, h2, h3, .navbar-brand {
-            font-weight: 700;
-        }
+  <!-- Google Fonts: Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
-        .navbar {
-            background-color: #002147;
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
+  <!-- Bootstrap & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-        .news-ticker {
-            background-color: #ffcc00;
-            padding: 10px;
-            white-space: nowrap;
-            overflow: hidden;
-            position: relative;
-        }
-        .news-ticker a {
-            color: #002147;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 50px;
-        }
+  <!-- CountUp.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.umd.js"></script>
 
-        .news-content {
-            display: inline-block;
-            animation: scroll 15s linear infinite;
-        }
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+    }
 
-        @keyframes scroll {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
-        }
+    h1, h2, h3, .navbar-brand {
+      font-weight: 700;
+    }
 
-        .footer {
-            background-color: #002147;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    .navbar {
+      background-color: #002147;
+    }
+
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+
+    .news-ticker {
+      background-color: #ffcc00;
+      padding: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-ticker a {
+      color: #002147;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 50px;
+    }
+
+    .news-content {
+      display: inline-block;
+      animation: scroll 15s linear infinite;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .stats-section {
+      background: linear-gradient(-45deg, #6a82fb, #fc5c7d, #45aaf2, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      padding: 60px 0;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(6px);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .stat-card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .stat-card h3 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .stat-card p {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Medi Global Pathway</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#About us">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Contact us">Contact us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img1.jpg" class="d-block w-100" alt="Campus View 1">
-            </div>
-            <div class="carousel-item">
-                <img src="img2.jpg" class="d-block w-100" alt="Campus View 2">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Medi Global Pathway</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#About us">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Services">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Contact us">Research</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="news-ticker">
-        <div class="news-content">
-            <a href="#">Important Announcements</a>
-        </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img1.jpg" class="d-block w-100" alt="Campus View 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="img2.jpg" class="d-block w-100" alt="Campus View 2" />
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-    <section id="about" class="container mt-5">
-        <h2>About Us</h2>
-        <p>At Medi Global Pathway, we specialize in comprehensive medical billing solutions tailored for healthcare professionals. Our goal is to simplify the revenue cycle for doctors by ensuring accurate claim submissions, timely reimbursements, and full compliance with the latest healthcare regulations. With a dedicated team of billing experts and advanced technology, we help practices focus more on patient care and less on paperwork. 
-            Whether you're a solo practitioner or a multi-specialty clinic, Medi Global Pathway is your trusted partner for streamlined and reliable medical billing services.</p>
-    </section>
+  <div class="news-ticker">
+    <div class="news-content">
+      <a href="#">Important Announcements</a>
+    </div>
+  </div>
 
-    <footer class="footer mt-5">
-        <p>&copy; 2025 Medi Global Pathway maintained by Medi Global Pathway. All Rights Reserved.</p>
-    </footer>
+  <section id="about" class="container mt-5">
+    <h2>About Us</h2>
+    <p>
+      At Medi Global Pathway, we specialize in comprehensive medical billing solutions tailored for healthcare professionals. Our goal is to simplify the revenue cycle for doctors by ensuring accurate claim submissions, timely reimbursements, and full compliance with the latest healthcare regulations. With a dedicated team of billing experts and advanced technology, we help practices focus more on patient care and less on paperwork. Whether you're a solo practitioner or a multi-specialty clinic, Medi Global Pathway is your trusted partner for streamlined and reliable medical billing services.
+    </p>
+  </section>
+
+  <!-- Stats Section with Cards & Animated Background -->
+  <section class="stats-section text-center">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="stat-card">
+            <i class="bi bi-people-fill"></i>
+            <h3 id="providers">0</h3>
+            <p>+Providers</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <i class="bi bi-person-badge-fill"></i>
+            <h3 id="employees">0</h3>
+            <p>+Employees</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <i class="bi bi-calendar-event-fill"></i>
+            <h3 id="experience">0</h3>
+            <p>+Years of Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-5">
+    <p>&copy; 2025 Medi Global Pathway maintained by Medi Global Pathway. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Animate Numbers -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const options = { duration: 2 };
+
+      const countProviders = new countUp.CountUp('providers', 850, options);
+      const countEmployees = new countUp.CountUp('employees', 2000, options);
+      const countExperience = new countUp.CountUp('experience', 20, options);
+
+      if (!countProviders.error) countProviders.start();
+      if (!countEmployees.error) countEmployees.start();
+      if (!countExperience.error) countExperience.start();
+    });
+  </script>
 </body>
 </html>
