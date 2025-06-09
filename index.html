@@ -102,12 +102,34 @@
       letter-spacing: 1px;
     }
 
+    .intro-section {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+
+    .intro-text h4 {
+      color: #002147;
+      font-weight: 700;
+    }
+
+    .intro-text p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
     .footer {
       background-color: #002147;
       color: white;
       text-align: center;
       padding: 10px;
       width: 100%;
+    }
+
+    .map-img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -120,9 +142,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#About us">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Contact us">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#About us">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Services">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Contact us">Research</a></li>
         </ul>
       </div>
     </div>
@@ -153,10 +175,29 @@
     </div>
   </div>
 
+  <!-- New Intro Section (before About Us) -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="img3.jpg" alt="Healthcare Professional" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-md-6 intro-text">
+          <h4>Welcome to Medi Global Pathway</h4>
+          <p>
+            We are the leading Healthcare Revenue Cycle Management Service Provider with over <strong>20 Years of Experience</strong> and serve a client-base ranging from individual to group practices, spanning the entire USA from west to east coast.
+          </p>
+          <img src="map-placeholder.png" alt="Map Coverage" class="map-img mt-3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
   <section id="about" class="container mt-5">
     <h2>About Us</h2>
     <p>
-      At Medi Global Pathway, we specialize in comprehensive medical billing solutions tailored for healthcare professionals. Our goal is to simplify the revenue cycle for doctors by ensuring accurate claim submissions, timely reimbursements, and full compliance with the latest healthcare regulations. With a dedicated team of billing experts and advanced technology, we help practices focus more on patient care and less on paperwork. Whether you're a solo practitioner or a multi-specialty clinic, Medi Global Pathway is your trusted partner for streamlined and reliable medical billing services.
+      At Medi Global Pathway, we specialize in comprehensive medical billing solutions tailored for healthcare professionals. Our goal is to simplify the revenue cycle for doctors by ensuring accurate claim submissions, timely reimbursements, and full compliance with the latest healthcare regulations.
     </p>
   </section>
 
@@ -197,7 +238,6 @@
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const options = { duration: 2 };
-
       const countProviders = new countUp.CountUp('providers', 850, options);
       const countEmployees = new countUp.CountUp('employees', 2000, options);
       const countExperience = new countUp.CountUp('experience', 20, options);
